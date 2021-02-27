@@ -136,7 +136,7 @@
 }
 
 .nightTimeStars {
-  background-image: url('night.png');
+  background-image: url('./images/night.png');
 }
 
 .overcast {
@@ -294,7 +294,7 @@ input[type='text']:focus {
 
 #arrowDiv {
   position: absolute;
-  background-image: url('arrow.png');
+  background-image: url('./images/arrow.png');
   width: 40px;
   height: 33px;
   z-index: 10;
