@@ -1,0 +1,958 @@
+#container {
+  width: 780px;
+  height: 489px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#gradient {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+#boston {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+#chicago {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+#losangeles {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+#newyork {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+#custom {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+#selectCity {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(96, 191, 249),
+    rgb(96, 191, 249),
+    rgb(96, 191, 249),
+    #ffe203
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.sunrise {
+  background-image: linear-gradient(
+    to top right,
+    #91242bc7,
+    #e4401bc4,
+    #e18d20c2,
+    #71a8ee,
+    #3072eb,
+    #1552c6,
+    #0542a8
+  );
+}
+
+.dayTime {
+  background-image: linear-gradient(
+    to top,
+    rgb(122, 179, 214),
+    rgb(96, 191, 249),
+    #78bfeb,
+    #53a1d1
+  );
+}
+
+.sunset {
+  background-image: linear-gradient(
+    to top left,
+    #ad4a28,
+    #dd723c,
+    #fc7001,
+    #dcb697,
+    #94b6d4,
+    #6295d8,
+    #5b86be,
+    #3e5879,
+    #020b1af1
+  );
+}
+
+.nightTime {
+  background-image: linear-gradient(to top, rgb(34, 34, 34), #000000);
+}
+
+.nightTimeStars {
+  background-image: url('night.png');
+}
+
+.overcast {
+  background-image: linear-gradient(to top, rgb(133, 138, 142), #858a8f);
+}
+
+#clouds {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+}
+
+#partlyCloudy {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+}
+
+#rain {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  z-index: 5;
+}
+
+#snow {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  z-index: 5;
+}
+
+#info {
+  position: absolute;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  z-index: 5;
+}
+
+.on {
+  opacity: 1;
+}
+
+.off {
+  opacity: 0;
+}
+
+.cloudsOnNight {
+  opacity: 0.2;
+}
+
+.threeQ {
+  opacity: 0.75;
+}
+
+#sun {
+  position: absolute;
+  padding: 0px;
+  z-index: 2;
+}
+
+.noon {
+  /* right: 300px; */
+  bottom: 265px;
+  left: 190px;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: 'Fredoka One', cursive;
+  color: white;
+}
+
+#top {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#middle {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+#form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.522);
+  color: black;
+  font-family: 'Raleway', sans-serif;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.buttonDisabled {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: error;
+  background-color: rgba(80, 80, 80, 0.522);
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  transition-duration: 0.5s;
+}
+
+.input {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  cursor: text;
+  background-color: rgba(255, 255, 255, 0.522);
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  margin: 0px;
+  text-align: center;
+}
+
+input[type='text']:focus {
+  background-color: rgba(255, 255, 255, 0.522);
+}
+
+#note {
+  color: white;
+  position: absolute;
+  margin-top: 55%;
+  font-size: 8px;
+}
+
+#arrowDiv {
+  position: absolute;
+  background-image: url('arrow.png');
+  width: 40px;
+  height: 33px;
+  z-index: 10;
+  background-repeat: no-repeat;
+}
+
+/*  */
+.negFifteen {
+  top: 361px;
+  right: 656px;
+}
+
+.negFourteen {
+  top: 349px;
+  right: 650.8px;
+}
+
+.negThirteen {
+  top: 338px;
+  right: 645.6px;
+}
+
+.negTwelve {
+  top: 327px;
+  right: 640.4px;
+}
+
+.negEleven {
+  top: 316px;
+  right: 635.2px;
+}
+/*  */
+.negTen {
+  top: 305px;
+  right: 630px;
+}
+
+.negNine {
+  top: 294px;
+  right: 624.8px;
+}
+
+.negEight {
+  top: 283px;
+  right: 619.6px;
+}
+
+.negSeven {
+  top: 272px;
+  right: 614.4px;
+}
+
+.negSix {
+  top: 261px;
+  right: 609.2px;
+}
+/*  */
+.negFive {
+  top: 250px;
+  right: 604px;
+}
+
+.negFour {
+  top: 239px;
+  right: 598.8px;
+}
+
+.negThree {
+  top: 228px;
+  right: 593.6px;
+}
+
+.negTwo {
+  top: 217px;
+  right: 588.4px;
+}
+
+.negOne {
+  top: 206px;
+  right: 583.2px;
+}
+/*  */
+.zero {
+  top: 195px;
+  right: 578px;
+}
+
+.one {
+  top: 178.4px;
+  right: 570.2px;
+}
+
+.two {
+  top: 161.8px;
+  right: 562.4px;
+}
+
+.three {
+  top: 145.2px;
+  right: 554.6px;
+}
+
+.four {
+  top: 128.6px;
+  right: 546.8px;
+}
+
+.five {
+  top: 112px;
+  right: 539px;
+}
+/*  */
+.six {
+  top: 99px;
+  right: 531.2px;
+}
+
+.seven {
+  top: 86px;
+  right: 523.4px;
+}
+
+.eight {
+  top: 73px;
+  right: 515.6px;
+}
+
+.nine {
+  top: 60px;
+  right: 507.8px;
+}
+
+.ten {
+  top: 47px;
+  right: 500px;
+}
+/*  */
+.eleven {
+  top: 34px;
+  right: 492.2px;
+}
+
+.twelve {
+  top: 22px;
+  right: 484.4px;
+}
+
+.thirteen {
+  top: 12px;
+  right: 476.6px;
+}
+
+.fourteen {
+  top: 0px;
+  right: 468.8px;
+}
+
+.fifteen {
+  bottom: 99px;
+  right: 461px;
+}
+/*  */
+.sixteen {
+  bottom: 108.4px;
+  right: 453.2px;
+}
+
+.seventeen {
+  bottom: 117.8px;
+  right: 445.4px;
+}
+
+.eighteen {
+  bottom: 127.2px;
+  right: 437.6px;
+}
+
+.nineteen {
+  bottom: 136.6px;
+  right: 429.8px;
+}
+
+.twenty {
+  bottom: 146px;
+  right: 422px;
+}
+/*  */
+.twentyone {
+  bottom: 153.6px;
+  right: 414.2px;
+}
+
+.twentytwo {
+  bottom: 161.2px;
+  right: 406.4px;
+}
+
+.twentythree {
+  bottom: 168.8px;
+  right: 398.6px;
+}
+
+.twentyfour {
+  bottom: 176.4px;
+  right: 390.8px;
+}
+
+.twentyfive {
+  bottom: 184px;
+  right: 384px;
+}
+/*  */
+.twentysix {
+  bottom: 190.2px;
+  right: 376.2px;
+}
+
+.twentyseven {
+  bottom: 196.4px;
+  right: 368.4px;
+}
+
+.twentyeight {
+  bottom: 202.6px;
+  right: 360.6px;
+}
+
+.twentynine {
+  bottom: 208.8px;
+  right: 352.8px;
+}
+
+.thirty {
+  bottom: 215px;
+  right: 344px;
+}
+/*  */
+.thirtyone {
+  bottom: 219.4px;
+  right: 336.2px;
+}
+
+.thirtytwo {
+  bottom: 223.8px;
+  right: 328.4px;
+}
+
+.thirtythree {
+  bottom: 228.2px;
+  right: 320.6px;
+}
+
+.thirtyfour {
+  bottom: 232.6px;
+  right: 312.8px;
+}
+
+.thirtyfive {
+  bottom: 237px;
+  right: 306px;
+}
+/*  */
+.thirtysix {
+  bottom: 240.4px;
+  right: 298.2px;
+}
+
+.thirtyseven {
+  bottom: 243.8px;
+  right: 290.4px;
+}
+
+.thirtyeight {
+  bottom: 247.2px;
+  right: 282.6px;
+}
+
+.thirtynine {
+  bottom: 250.6px;
+  right: 274.8px;
+}
+
+.fourty {
+  bottom: 254px;
+  right: 267px;
+}
+/*  */
+.fourtyone {
+  bottom: 255.8px;
+  right: 259.2px;
+}
+
+.fourtytwo {
+  bottom: 257.6px;
+  right: 251.4px;
+}
+
+.fourtythree {
+  bottom: 259.4px;
+  right: 243.6px;
+}
+
+.fourtyfour {
+  bottom: 261.2px;
+  right: 235.8px;
+}
+
+.fourtyfive {
+  bottom: 263px;
+  right: 228px;
+}
+/*  */
+.fourtysix {
+  bottom: 263.6px;
+  right: 220.2px;
+}
+
+.fourtyseven {
+  bottom: 264.2px;
+  right: 212.4px;
+}
+
+.fourtyeight {
+  bottom: 264.8px;
+  right: 204.6px;
+}
+
+.fourtynine {
+  bottom: 265.4px;
+  right: 196.8px;
+}
+
+.fifty {
+  bottom: 266px;
+  right: 189px;
+}
+/*  */
+.fiftyone {
+  bottom: 265.4px;
+  right: 181.2px;
+}
+
+.fiftytwo {
+  bottom: 264.8px;
+  right: 173.4px;
+}
+
+.fiftythree {
+  bottom: 264.2px;
+  right: 165.6px;
+}
+
+.fiftyfour {
+  bottom: 263.6px;
+  right: 157.8px;
+}
+
+.fiftyfive {
+  bottom: 264px;
+  right: 150px;
+}
+/*  */
+.fiftysix {
+  bottom: 261.2px;
+  right: 142.2px;
+}
+
+.fiftyseven {
+  bottom: 259.4px;
+  right: 134.4px;
+}
+
+.fiftyeight {
+  bottom: 257.6px;
+  right: 126.6px;
+}
+
+.fiftynine {
+  bottom: 255.8px;
+  right: 118.8px;
+}
+
+.sixty {
+  bottom: 254px;
+  right: 112px;
+}
+/*  */
+.sixtyone {
+  bottom: 250.6px;
+  right: 104.2px;
+}
+
+.sixtytwo {
+  bottom: 247.2px;
+  right: 96.4px;
+}
+
+.sixtythree {
+  bottom: 243.8px;
+  right: 88.6px;
+}
+
+.sixtyfour {
+  bottom: 240.4px;
+  right: 80.8px;
+}
+
+.sixtyfive {
+  bottom: 237px;
+  right: 73px;
+}
+/*  */
+.sixtysix {
+  bottom: 232.4px;
+  right: 66.2px;
+}
+
+.sixtyseven {
+  bottom: 227.8px;
+  right: 57.4px;
+}
+
+.sixtyeight {
+  bottom: 223.2px;
+  right: 49.6px;
+}
+
+.sixtynine {
+  bottom: 218.6px;
+  right: 41.8px;
+}
+
+.seventy {
+  bottom: 214px;
+  right: 34px;
+}
+/*  */
+.seventyone {
+  bottom: 207.8px;
+  right: 26.2px;
+}
+
+.seventytwo {
+  bottom: 201.6px;
+  right: 18.4px;
+}
+
+.seventythree {
+  bottom: 195.4px;
+  right: 10.6px;
+}
+
+.seventyfour {
+  bottom: 189.2px;
+  right: 2.8px;
+}
+
+.seventyfive {
+  bottom: 183px;
+  left: 385px;
+}
+/*  */
+.seventysix {
+  bottom: 175.6px;
+  left: 392.8px;
+}
+
+.seventyseven {
+  bottom: 168.2px;
+  left: 400.6px;
+}
+
+.seventyeight {
+  bottom: 160.8px;
+  left: 408.4px;
+}
+
+.seventynine {
+  bottom: 153.4px;
+  left: 416.2px;
+}
+
+.eighty {
+  bottom: 146px;
+  left: 424px;
+}
+/*  */
+.eightyone {
+  bottom: 136.4px;
+  left: 431.8px;
+}
+
+.eightytwo {
+  bottom: 126.8px;
+  left: 439.6px;
+}
+
+.eightythree {
+  bottom: 117.2px;
+  left: 447.4px;
+}
+
+.eightyfour {
+  bottom: 107.6px;
+  left: 455.2px;
+}
+
+.eightyfive {
+  bottom: 98px;
+  left: 463px;
+}
+/*  */
+.eightysix {
+  top: 2px;
+  left: 470.8px;
+}
+
+.eightyseven {
+  top: 13px;
+  left: 478.6px;
+}
+
+.eightyeight {
+  top: 25px;
+  left: 486.4px;
+}
+
+.eightynine {
+  top: 37px;
+  left: 494.2px;
+}
+
+.ninety {
+  top: 48px;
+  left: 502px;
+}
+/*  */
+.ninetyone {
+  top: 60.6px;
+  left: 509.8px;
+}
+
+.ninetytwo {
+  top: 74.2px;
+  left: 517.6px;
+}
+
+.ninetythree {
+  top: 87.8px;
+  left: 525.4px;
+}
+
+.ninetyfour {
+  top: 101.4px;
+  left: 533.2px;
+}
+
+.ninetyfive {
+  top: 115px;
+  left: 541px;
+}
+/*  */
+.ninetysix {
+  top: 131px;
+  left: 548.8px;
+}
+
+.ninetyseven {
+  top: 147px;
+  left: 556.6px;
+}
+
+.ninetyeight {
+  top: 163px;
+  left: 564.4px;
+}
+
+.ninetynine {
+  top: 179px;
+  left: 572.2px;
+}
+
+.onehundred {
+  top: 195px;
+  left: 580px;
+}
+/*  */
+.postOne {
+  top: 205.6px;
+  left: 585.2px;
+}
+
+.postTwo {
+  top: 216.3px;
+  left: 590.4px;
+}
+
+.postThree {
+  top: 227px;
+  left: 595.6px;
+}
+
+.postFour {
+  top: 237.6px;
+  left: 600.8px;
+}
+
+.postFive {
+  top: 248.3px;
+  left: 606px;
+}
+/*  */
+.postSix {
+  top: 259px;
+  left: 611.2px;
+}
+
+.postSeven {
+  top: 269.6px;
+  left: 616.4px;
+}
+
+.postEight {
+  top: 280.3px;
+  left: 621.6px;
+}
+
+.postNine {
+  top: 291px;
+  left: 626.8px;
+}
+
+.postTen {
+  top: 301.6px;
+  left: 632px;
+}
+/*  */
+.postEleven {
+  top: 312.3px;
+  left: 637.2px;
+}
+
+.postTwelve {
+  top: 323px;
+  left: 642.4px;
+}
+
+.postThirteen {
+  top: 333.6px;
+  left: 647.6px;
+}
+
+.postFourteen {
+  top: 344.3px;
+  left: 652.8px;
+}
+
+.postFifteen {
+  top: 355px;
+  left: 658px;
+}
